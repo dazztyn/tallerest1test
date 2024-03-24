@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
 
-    cout <<"print del vixo 2"<<endl;
+    cout <<"el ramos me crasheo el repositorio dea"<<endl;
 
     return 0;
 }
