@@ -3,13 +3,13 @@
 
 using namespace std;
 
-Asistente::Asistente(string nombre, string tipoAsistente, int edad, string ocupacion, string institucion){
+Asistente::Asistente(string nombre, string tipoAsistente, int edad, string ocupacion){
 
     this -> nombre = nombre;
     this -> tipoAsistente = tipoAsistente;
     this -> edad = edad;
     this -> ocupacion = ocupacion;
-    this -> institucion = institucion;
+    
 }
 
 string Asistente::getNombre(){
@@ -42,14 +42,6 @@ string Asistente::getOcupacion(){
 
 void Asistente::setOcupacion(string ocupacion){
     this -> ocupacion = ocupacion;
-}
-
-string Asistente::getInstitucion(){
-    return this -> institucion;
-}
-
-void Asistente::setInstitucion(string institucion){
-    this -> institucion = institucion;
 }
 
 string Asistente::desplegarInfo(){

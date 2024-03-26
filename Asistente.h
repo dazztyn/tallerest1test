@@ -1,18 +1,19 @@
 #pragma once
 #include <string>
+#include <vector>
 using namespace std;
 
 class Asistente{
 
-private: //atributos
+protected: //atributos
 
     string nombre,tipoAsistente;
     int edad;
-    string ocupacion,institucion;
+    string ocupacion;
 
 public: //metodos
 
-    Asistente(string, string, int, string, string); // constructor
+    Asistente(string, string, int, string); // constructor
 
     //getters y setters
     string getNombre();
@@ -23,8 +24,6 @@ public: //metodos
     void setEdad(int);
     string getOcupacion();
     void setOcupacion(string);
-    string getInstitucion();
-    void setInstitucion(string);
 
     string desplegarInfo();
 

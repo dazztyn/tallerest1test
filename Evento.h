@@ -1,12 +1,15 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "Asistente.h"
 using namespace std;
 
 class Evento{
-private:
+protected:
 
-
+    int duracion;
+    string ubicacion;
+    vector<Asistente> listaAsistentes;
 
 public:
 
