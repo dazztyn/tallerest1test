@@ -10,21 +10,25 @@ protected: //atributos
     string nombre,tipoAsistente;
     int edad;
     string ocupacion;
+    //string institucion;
 
 public: //metodos
 
     Asistente(string, string, int, string); // constructor
 
     //getters y setters
-    string getNombre();
-    void setNombre(string);
-    string getTipoAsistente();
-    void setTipoAsistente(string);
-    int getEdad();
-    void setEdad(int);
-    string getOcupacion();
-    void setOcupacion(string);
+    virtual string getNombre();
+    virtual void setNombre(string);
+    virtual string getTipoAsistente();
+    virtual void setTipoAsistente(string);
+    virtual int getEdad();
+    virtual void setEdad(int);
+    virtual string getOcupacion();
+    virtual void setOcupacion(string);
 
-    string desplegarInfo();
+    /*
+    virtual string getInstitucion();
+    virtual void setInstitucion(string);
+    */
 
 };

@@ -44,6 +44,3 @@ void Asistente::setOcupacion(string ocupacion){
     this -> ocupacion = ocupacion;
 }
 
-string Asistente::desplegarInfo(){
-    cout <<"aqui va la info lol"<<endl;
-}

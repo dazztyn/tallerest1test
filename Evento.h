@@ -8,10 +8,18 @@ class Evento{
 protected:
 
     int duracion;
-    string ubicacion;
-    vector<Asistente> listaAsistentes;
+    string ubicacion, fecha;
+    vector<Asistente> asistentes;
 
 public:
 
-
+    Evento::Evento(int, string, string);
+    virtual int getDuracion();
+    virtual void setDuracion(int);
+    virtual string getUbicacion();
+    virtual void setUbicacion();
+    virtual string getFecha();
+    virtual void setFecha();
+    
+    
 };
