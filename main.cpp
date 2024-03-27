@@ -2,6 +2,10 @@
 using namespace std;
 
 void iniciarMenu();
+void agendarEvento();
+void consultaAsistentes();
+void registroAsistentes();
+void guardarRegistro();
 
 int main(){
 
@@ -9,10 +13,10 @@ int main(){
     iniciarMenu();
     
     return 0;
-}
+}//fin main
 
 
-void iniciarMenu(){
+void iniciarMenu(){ //inicia el menu del programa
 
     cout << "------------------------------"<<endl;
     cout << "Bienvenido al sistema de registro de eventos" << endl;
@@ -31,7 +35,21 @@ void iniciarMenu(){
 
     do{
 
-        
+        if(opt == "1"){
+            agendarEvento();
+        }
+        else if(opt == "2"){
+            consultaAsistentes();
+        }
+        else if(opt == "3"){
+            registroAsistentes();
+        }
+        else if(opt == "4"){
+            guardarRegistro();
+        }
+        else if(opt == "5"){
+            cout << "Saliendo. Hasta luego!" << endl;
+        }
         
 
     }
@@ -42,4 +60,4 @@ void iniciarMenu(){
 
 
 
-}
+}//fin iniciarMenu

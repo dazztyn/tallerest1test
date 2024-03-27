@@ -5,21 +5,25 @@
 using namespace std;
 
 class Evento{
-protected:
+protected: //atributos
 
     int duracion;
     string ubicacion, fecha;
     vector<Asistente> asistentes;
 
-public:
+public: //metodos
 
-    Evento::Evento(int, string, string);
+    Evento::Evento(int, string, string); //constructor
+
+    //getters y setters
     virtual int getDuracion();
     virtual void setDuracion(int);
     virtual string getUbicacion();
     virtual void setUbicacion();
     virtual string getFecha();
     virtual void setFecha();
+    
+    virtual void agregarAsistente(Asistente);
     
     
 };

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Asistente::Asistente(string nombre, string tipoAsistente, int edad, string ocupacion){
+Asistente::Asistente(string nombre, string tipoAsistente, int edad, string ocupacion){ //constructor
 
     this -> nombre = nombre;
     this -> tipoAsistente = tipoAsistente;
