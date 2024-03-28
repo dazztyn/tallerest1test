@@ -1,17 +1,24 @@
 #pragma once
-#include <string>
+#include <iostream>
 #include <vector>
 #include "Evento.h"
 using namespace std;
 
 class Concierto: public Evento{
 
-private:
+private: //atributos
     int capacidad;
     string tipoConcierto;
 
-public:
+public: //metodos
 
-    Concierto::Concierto();
+    Concierto::Concierto(int, string, string,int,string); //constructor
+    Concierto::~Concierto(); //destructor
+
+    //getters y setters
+    int getCapacidad();
+    void setCapacidad(int);
+    string getTipoConcierto();
+    void setTipoConcierto(string);
 
 };

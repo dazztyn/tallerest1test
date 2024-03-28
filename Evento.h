@@ -1,29 +1,30 @@
 #pragma once
-#include <string>
+#include <iostream>
 #include <vector>
 #include "Asistente.h"
 using namespace std;
 
 class Evento{
-protected: //atributos
-
+private: //atributos
     int duracion;
     string ubicacion, fecha;
-    vector<Asistente> asistentes;
+protected:
+    vector<Asistente*> asistentes;
 
 public: //metodos
 
     Evento::Evento(int, string, string); //constructor
+    Evento::~Evento(); //destructor
 
     //getters y setters
     virtual int getDuracion();
     virtual void setDuracion(int);
     virtual string getUbicacion();
-    virtual void setUbicacion();
+    virtual void setUbicacion(string);
     virtual string getFecha();
-    virtual void setFecha();
+    virtual void setFecha(string);
     
-    virtual void agregarAsistente(Asistente);
+    virtual void agregarAsistente(Asistente*);
     
     
 };

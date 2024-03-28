@@ -1,20 +1,23 @@
 #include <iostream>
 using namespace std;
 
-void iniciarMenu();
-void agendarEvento();
-void consultaAsistentes();
-void registroAsistentes();
-void guardarRegistro();
+//declaracion de funciones
 
-int main(){
+void agendarEvento(){
 
-    //cargarDatos();
-    iniciarMenu();
-    
-    return 0;
-}//fin main
+}//fin agendarEvento
 
+void consultaAsistentes(){
+
+}//fin consultaAsistentes
+
+void registroAsistentes(){
+
+}//fin registroAsistentes
+
+void guardarRegistro(){
+
+}//fin guardarRegistro
 
 void iniciarMenu(){ //inicia el menu del programa
 
@@ -50,14 +53,20 @@ void iniciarMenu(){ //inicia el menu del programa
         else if(opt == "5"){
             cout << "Saliendo. Hasta luego!" << endl;
         }
-        
+        else{
+            cout << "Opcion invalida, por favor intente nuevamente" << endl;
+        }
 
     }
 
-    while(opt != "6");
-        
-    
-
-
+    while(opt != "5");
 
 }//fin iniciarMenu
+
+int main(){
+
+    //cargarDatos();
+    iniciarMenu();
+    
+    return 0;
+}//fin main
