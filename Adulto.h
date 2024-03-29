@@ -2,11 +2,10 @@
 #include <iostream>
 #include <vector>
 #include <string>
-//#include "Asistente.h"
+#include "Asistente.h"
 using namespace std;
 
-class Adulto
-{ //atributos clase Adulto
+class Adulto: public Asistente{ //atributos clase Adulto
 private:
     string nombre, ocupacion, empresa, cargo;
     int edad;
@@ -30,7 +29,7 @@ public: //metodos
     virtual string getCargo();
     virtual void setCargo(string);
 
-    virtual void agregarAsistente(Asistente*);
+    virtual void addAdulto(Asistente*);
 
 
 

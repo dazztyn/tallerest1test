@@ -7,7 +7,8 @@
 using namespace std;
 
 //Constructor clase 
-Adolescente::Adolescente(string nombre, int edad, string ocupacion, string institucion, int nivel){
+Adolescente::Adolescente(string nombre, int edad, string ocupacion, string institucion, int nivel)
+{
     this -> nombre = nombre;
     this -> edad = edad;
     this -> ocupacion = ocupacion;
@@ -69,7 +70,7 @@ void Adolescente::setNivel(int nivel)
     this -> nivel = nivel;
 }
 
-/*void Adolescente::addAdolescente(Asistente* ptrAsistente) //?? sera necesario para esta clase vecino?
+void Adolescente::addAdolescente(Asistente* ptrAsistente) //?? sera necesario para esta clase vecino?
 {
     asistentes.push_back(ptrAsistente);
-}*/
+}

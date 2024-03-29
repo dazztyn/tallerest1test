@@ -3,12 +3,11 @@
 #include <stdlib.h>
 #include <string>
 #include <vector>
-//#include "Asistente.h"
+#include "Asistente.h"
 
 using namespace std;
 
-class Adolescente
-{
+class Adolescente: public Asistente{
 
 private:
     string nombre,ocupacion,institucion;

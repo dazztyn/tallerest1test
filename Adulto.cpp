@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "Adulto.h"
-//#include "Asistente.h"
+#include "Asistente.h"
 
 using namespace std;
 
@@ -66,7 +66,7 @@ void Adulto::setCargo(string cargo)
     this -> cargo = cargo;
 } 
 
-void Adolescente::addAdolescente(Asistente* ptrAsistente); //?? sera necesario para esta clase vecino?
+void Adulto::addAdulto(Asistente* ptrAsistente)//?? sera necesario para esta clase vecino?
 {
     asistentes.push_back(ptrAsistente);
 }
