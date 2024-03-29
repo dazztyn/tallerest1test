@@ -61,6 +61,8 @@ void iniciarMenu(){ //inicia el menu del programa
 
     while(opt != "5");
 
+    cout<<"Adios..."<<endl;
+
 }//fin iniciarMenu
 
 int main(){
@@ -70,6 +72,3 @@ int main(){
     
     return 0;
 }//fin main
-
-
-cout<<"hola mundillo"<<endl;
