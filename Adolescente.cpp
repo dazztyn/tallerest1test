@@ -3,15 +3,13 @@
 #include <string>
 #include <vector>
 #include "Adolescente.h"
-//#include "Asistente.h"
+#include "Asistente.h"
 using namespace std;
 
 //Constructor clase 
-Adolescente::Adolescente(string nombre, int edad, string ocupacion, string institucion, int nivel)
+Adolescente::Adolescente(string nombre, int edad, string ocupacion, string institucion, int nivel): Asistente(nombre, edad, ocupacion)
 {
-    this -> nombre = nombre;
-    this -> edad = edad;
-    this -> ocupacion = ocupacion;
+   
     this -> institucion = institucion;
     this -> nivel = nivel;
 
@@ -20,35 +18,6 @@ Adolescente::Adolescente(string nombre, int edad, string ocupacion, string insti
 Adolescente::~Adolescente(){};//Destructor clase
 
 //Getters y Setters
-string Adolescente::getNombre()
-{
-    return this -> nombre;
-}
-
-void Adolescente::setNombre(string nombre)
-{
-    this -> nombre = nombre;
-}
-
-int Adolescente::getEdad()
-{
-    return this -> edad;
-}
-
-void Adolescente::setEdad(int edad)
-{
-    this -> edad = edad;
-}
-
-string Adolescente::getOcupacion()
-{
-    return this -> ocupacion = ocupacion;
-}
-
-void Adolescente::setOcupacion(string ocupacion)
-{
-    this -> ocupacion = ocupacion;
-}
 
 string Adolescente::getInstitucion()
 {
@@ -68,9 +37,4 @@ int Adolescente::getNivel()
 void Adolescente::setNivel(int nivel)
 {
     this -> nivel = nivel;
-}
-
-void Adolescente::addAdolescente(Asistente* ptrAsistente) //?? sera necesario para esta clase vecino?
-{
-    asistentes.push_back(ptrAsistente);
 }

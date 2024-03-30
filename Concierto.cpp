@@ -4,7 +4,8 @@
 using namespace std;
 
 //constructor de herencia
-Concierto::Concierto(int duracion, string ubicacion, string fecha, int capacidad, string tipoConcierto) : Evento(duracion, ubicacion, fecha){
+Concierto::Concierto(int duracion, string ubicacion, string fecha, int capacidad, string tipoConcierto) : Evento(duracion, ubicacion, fecha)
+{
     this -> capacidad = capacidad;
     this -> tipoConcierto = tipoConcierto;
 }

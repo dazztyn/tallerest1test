@@ -7,28 +7,21 @@ class Asistente{
 
 protected: //atributos
 
-    string nombre,tipoAsistente;
+    string nombre;
     int edad;
     string ocupacion;
     //string institucion;
 
 public: //metodos
 
-    Asistente(string, string, int, string); // constructor
+    Asistente(string,int, string); // constructor
 
     //getters y setters
     virtual string getNombre();
     virtual void setNombre(string);
-    virtual string getTipoAsistente();
-    virtual void setTipoAsistente(string);
     virtual int getEdad();
     virtual void setEdad(int);
     virtual string getOcupacion();
     virtual void setOcupacion(string);
-
-    /*
-    virtual string getInstitucion();
-    virtual void setInstitucion(string);
-    */
 
 };
