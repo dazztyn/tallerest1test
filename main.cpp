@@ -16,7 +16,6 @@ void agendarEvento(){
     int duracion;
     string ubicacion;
     string fecha;
-
     
     
 }//fin agendarEvento
