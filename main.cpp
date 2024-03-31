@@ -1,10 +1,24 @@
 #include <iostream>
 using namespace std;
 
-//declaracion de funciones
 
 void agendarEvento(){
 
+    cout << "Que evento desea agregar?"<<endl;
+    cout <<"1) Concierto "<< endl;
+    cout <<"2) Conferencia "<< endl;
+    cout <<"3) Fiesta "<< endl;
+    cout <<"4) Evento deportivo "<< endl;
+
+    string opt;
+    cin>>opt;
+
+    int duracion;
+    string ubicacion;
+    string fecha;
+
+    
+    
 }//fin agendarEvento
 
 void consultaAsistentes(){
@@ -60,8 +74,6 @@ void iniciarMenu(){ //inicia el menu del programa
     }
 
     while(opt != "5");
-
-    cout<<"Adios..."<<endl;
 
 }//fin iniciarMenu
 

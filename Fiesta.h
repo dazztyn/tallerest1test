@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include <vector>
 #include "Evento.h"
 using namespace std;
 
@@ -13,8 +12,10 @@ public: //metodos
 
     Fiesta::Fiesta(int,string,string,string,string); //constructor
     Fiesta::~Fiesta(); //destructor
+
+    //getters y setters
     string getTematica();
     void setTematica(string);
     string getInvitadoEspecial();
-    void setInvitadoEspecial();
+    void setInvitadoEspecial(string);
 };
