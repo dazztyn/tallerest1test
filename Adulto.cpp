@@ -5,11 +5,9 @@
 
 using namespace std;
 
-Adulto::Adulto(string nombre, int edad, string ocupacion, string empresa, string cargo){
+Adulto::Adulto(string nombre, int edad, string ocupacion, string empresa, string cargo) : Asistente(nombre, edad, ocupacion)
+{
 
-    this -> nombre = nombre;
-    this -> edad = edad;
-    this -> ocupacion = ocupacion;
     this -> empresa = empresa;
     this -> cargo = cargo;
 
@@ -17,34 +15,6 @@ Adulto::Adulto(string nombre, int edad, string ocupacion, string empresa, string
 }
 
 Adulto::~Adulto(){}
-
-string Adulto::getNombre(){
-    return this -> nombre;
-}
-
-void Adulto::setNombre(string nombre)
-{
-    this -> nombre = nombre;    
-}
-
-int Adulto:: getEdad(){
-    return this -> edad;
-}
-
-void Adulto::setEdad(int edad)
-{
-    this -> edad = edad;
-}
-
-string Adulto::getOcupacion()
-{
-    return this -> ocupacion;
-}
-
-void Adulto::setOcupacion(string ocupacion)
-{
-    this -> ocupacion = ocupacion;
-}
 
 string Adulto::getEmpresa()
 {
@@ -66,7 +36,3 @@ void Adulto::setCargo(string cargo)
     this -> cargo = cargo;
 } 
 
-void Adulto::addAdulto(Asistente* ptrAsistente)//?? sera necesario para esta clase vecino?
-{
-    asistentes.push_back(ptrAsistente);
-}
