@@ -7,7 +7,7 @@
 using namespace std;
 
 //Constructor clase 
-Adolescente::Adolescente(string nombre, int edad, string ocupacion, string institucion, int nivel): Asistente(nombre, edad, ocupacion)
+Adolescente::Adolescente(string nombre, int edad, string ocupacion, string institucion, int nivel): Asistente(nombre, edad, tipoAsistente,ocupacion)
 {
    
     this -> institucion = institucion;

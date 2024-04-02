@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Adulto::Adulto(string nombre, int edad, string ocupacion, string empresa, string cargo) : Asistente(nombre, edad, ocupacion)
+Adulto::Adulto(string nombre, int edad, string ocupacion, string empresa, string cargo) : Asistente(nombre, edad, tipoAsistente,ocupacion)
 {
 
     this -> empresa = empresa;
