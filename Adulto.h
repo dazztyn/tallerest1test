@@ -10,8 +10,8 @@ private:
 
 public: //metodos
 
-    Adulto::Adulto(string,int, string, string, string); //Constructor
-    Adulto::~Adulto(); //Destructor 
+    Adulto(string,int, string, string, string); //Constructor
+    ~Adulto(); //Destructor 
 
     //Getters y Setters
     string getEmpresa();

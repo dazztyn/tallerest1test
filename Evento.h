@@ -13,8 +13,8 @@ protected:
 
 public: //metodos
 
-    Evento::Evento(int, string, string); //constructor
-    Evento::~Evento(); //destructor
+    Evento(int, string, string); //constructor
+    ~Evento(); //destructor
 
     //getters y setters
     virtual int getDuracion();
@@ -25,6 +25,6 @@ public: //metodos
     virtual void setFecha(string);
     
     virtual void agregarAsistente(Asistente*);
-    
+
     
 };

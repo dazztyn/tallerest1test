@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include <vector>
 #include "Evento.h"
 using namespace std;
 
@@ -12,8 +11,8 @@ private: //atributos
 
 public: //metodos
 
-    Concierto::Concierto(int, string, string,int,string); //constructor
-    Concierto::~Concierto(); //destructor
+    Concierto(int, string, string,int,string); //constructor
+    ~Concierto(); //destructor
 
     //getters y setters
     int getCapacidad();

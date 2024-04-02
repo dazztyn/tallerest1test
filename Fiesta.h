@@ -10,8 +10,8 @@ private: //atributos
 
 public: //metodos
 
-    Fiesta::Fiesta(int,string,string,string,string); //constructor
-    Fiesta::~Fiesta(); //destructor
+    Fiesta(int,string,string,string,string); //constructor
+    ~Fiesta(); //destructor
 
     //getters y setters
     string getTematica();

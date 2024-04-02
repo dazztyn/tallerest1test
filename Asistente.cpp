@@ -3,11 +3,11 @@
 
 using namespace std;
 
-Asistente::Asistente(string nombre, string tipoAsistente, int edad, string ocupacion){ //constructor
+Asistente::Asistente(string nombre, int edad, string tipoAsistente, string ocupacion){ //constructor
 
     this -> nombre = nombre;
-    this -> tipoAsistente = tipoAsistente;
     this -> edad = edad;
+    this -> tipoAsistente = tipoAsistente;
     this -> ocupacion = ocupacion;
     
 }
