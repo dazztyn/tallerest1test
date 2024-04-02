@@ -2,7 +2,7 @@
 #include "Fiesta.h"
 using namespace std;
 
-Fiesta::Fiesta(int duracion, string ubicacion, string fecha, string tematica, string invitado):Evento(duracion,ubicacion,fecha){
+Fiesta::Fiesta(int duracion, string ubicacion, string fecha,string tipoEvento, string tematica, string invitado):Evento(duracion,ubicacion,fecha,tipoEvento){
 
     this -> tematica = tematica;
     this -> invitadoEspecial = invitado;

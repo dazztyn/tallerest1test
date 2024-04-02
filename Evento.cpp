@@ -4,11 +4,12 @@
 #include "Asistente.h"
 using namespace std;
 
-Evento::Evento(int duracion, string ubicacion, string fecha){ //constructor clase padre
+Evento::Evento(int duracion, string ubicacion, string fecha,string tipoEvento){ //constructor clase padre
 
     this -> duracion = duracion;
     this -> ubicacion = ubicacion;
     this -> fecha = fecha;
+    this -> tipoEvento = tipoEvento;
     
 }
 
@@ -36,6 +37,13 @@ string Evento::getFecha(){
 
 void Evento::setFecha(string fecha){
     this -> fecha = fecha;
+}
+
+string Evento::getTipoEvento(){
+    return this -> tipoEvento;
+}
+void Evento::setTipoEvento(string tipoEvento){
+    this -> tipoEvento = tipoEvento;
 }
 
 void Evento::agregarAsistente(Asistente* ptrAsistente){ //agrega un puntero tipo asistente a la lista

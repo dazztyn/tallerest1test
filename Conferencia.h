@@ -9,7 +9,7 @@ private:
 
 public:
 
-    Conferencia(int,string,string,string); //constructor
+    Conferencia(int,string,string,string,string); //constructor
     ~Conferencia();
 
     //atributos

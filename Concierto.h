@@ -11,7 +11,7 @@ private: //atributos
 
 public: //metodos
 
-    Concierto(int, string, string,int,string); //constructor
+    Concierto(int, string, string,string,int,string); //constructor
     ~Concierto(); //destructor
 
     //getters y setters

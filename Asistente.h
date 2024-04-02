@@ -10,7 +10,6 @@ protected: //atributos
     int edad;
     string tipoAsistente;
     string ocupacion;
-    //string institucion;
 
 public: //metodos
 

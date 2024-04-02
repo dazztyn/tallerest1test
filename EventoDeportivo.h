@@ -10,7 +10,7 @@ private: //atributos
     bool hayApuestas;
 
 public: //metodos
-    EventoDeportivo(int,string,string,string,bool); //constructor
+    EventoDeportivo(int,string,string,string,string,bool); //constructor
     ~EventoDeportivo(); //destructor
 
     //getters y setters

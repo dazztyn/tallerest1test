@@ -18,8 +18,5 @@ public: //metodos
     void setEmpresa(string);
     string getCargo();
     void setCargo(string);
-
-
-
-
+    
 };

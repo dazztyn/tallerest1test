@@ -6,8 +6,11 @@
 #include "Fiesta.h"
 #include "EventoDeportivo.h"
 #include "Asistente.h"
+#include "Adulto.h"
+#include "Adolescente.h"
 using namespace std;
 
+//lista global eventos
 vector<Evento*> listaEventos;
 
 void agendarEvento(){
@@ -17,70 +20,108 @@ void agendarEvento(){
     cout <<"2) Conferencia "<< endl;
     cout <<"3) Fiesta "<< endl;
     cout <<"4) Evento deportivo "<< endl;
-    cout << ">" << endl;
+    cout << ">";
 
     string opt;
     cin>>opt;
 
+    cout<<endl;
     int duracion;
     string ubicacion;
     string fecha;
 
-    cout << "Ingrese duracion en horas (ej: 3): " << endl;
-    cout << ">" << endl;
-    cin >> duracion;
-    cout << "Ingrese ubicacion (ej: Coquimbo): " << endl;
-    cout << ">" << endl;
-    cin >> ubicacion;
-    cout << "Ingrese fecha (dd/mm/aaaa): " << endl;
-    cout << ">" << endl;
+    cout << "Ingrese duracion en horas (ej: 3): " << endl; cout << ">"; cin >> duracion; cout<<endl;
+
+    cout << "Ingrese ubicacion (ej: Coquimbo): " << endl; cout << ">"; cin >> ubicacion; cout<<endl;
+
+    cout << "Ingrese fecha (dd/mm/aaaa): " << endl; cout << ">"; cin >> fecha; cout<<endl;
 
     if(opt == "1"){
 
         int capacidad;
-        cout << "Ingrese capacidad de asistentes: "<<endl;
-        cout << ">" << endl;
-        cin>>capacidad;
+        cout << "Ingrese capacidad de asistentes: "<<endl; cout << ">" << endl; cin>>capacidad;
 
         string tipoConcierto;
-        cout << "Ingrese tipo de concierto (particular / festival): " << endl;
-        cout << ">" << endl;
-        cin>>tipoConcierto;
+        cout << "Ingrese tipo de concierto (particular / festival): " << endl; cout << ">" << endl; cin>>tipoConcierto;
 
-        Evento* concierto = new Concierto(duracion,ubicacion,fecha,capacidad,tipoConcierto);
+        Evento* concierto = new Concierto(duracion,ubicacion,fecha,"concierto",capacidad,tipoConcierto);
         listaEventos.push_back(concierto);
 
-
+        cout << "¡Concierto agregado!" << endl;
+        
     }
     else if(opt == "2"){
         string tematica;
-        cout << "Ingrese tematica de la conferencia" << endl;
-        cout << ">" << endl;
-        cin >> tematica;
+        cout << "Ingrese tematica de la conferencia" << endl; cout << ">" << endl; cin >> tematica;
 
-        Evento* conferencia = new Conferencia(duracion,ubicacion,fecha,tematica);
+        Evento* conferencia = new Conferencia(duracion,ubicacion,fecha,"conferencia",tematica);
         listaEventos.push_back(conferencia);
+
+        cout << "¡Conferencia agregada!" << endl;
     }
     else if(opt == "3"){
         string tematica;
-        cout <<"Ingrese tematica de la fiesta" << endl;
-        cout << ">" << endl;
-        cin >> tematica;
-        string invEsp;
-        cout << "Ingrese invitadx especial ( - para ninguno): " << endl;
-        cout << ">" <<endl;
-        cin >> invEsp;
+        cout <<"Ingrese tematica de la fiesta" << endl; cout << ">" << endl; cin >> tematica;
 
-        Evento* fiesta = new Fiesta(duracion,ubicacion,fecha,tematica,invEsp);
+        string invEsp;
+        cout << "Ingrese invitadx especial ( - para ninguno): " << endl; cout << ">" <<endl; cin >> invEsp;
+
+        Evento* fiesta = new Fiesta(duracion,ubicacion,fecha,"fiesta",tematica,invEsp);
         listaEventos.push_back(fiesta);
+
+        cout <<"¡Fiesta agregada!"<<endl;
+        
     }
     else if(opt == "4"){
+        string deporte;
+        cout << "Ingrese deporte a jugar: " << endl; cout << ">" << endl; cin>> deporte;
+
+        string apuestas;
+        bool hayApuesta = false;
+        cout << "Hay apuestas? (s/n): " << endl; cout << ">" <<endl; cin>>apuestas;
+
+        if(apuestas == "s"){ hayApuesta = true;}
+
+        Evento* evDeportivo = new EventoDeportivo(duracion,ubicacion,fecha,"evento deportivo",deporte,hayApuesta);
+        listaEventos.push_back(evDeportivo);
+
+        cout << "¡Evento Deportivo agregado!" << endl;
         
+    }
+    else{
+        cout << "Opcion invalida. Saliendo..." << endl;
     }
 
     
 }//fin agendarEvento
+
 void registroAsistentes(){
+
+    cout << "seleccione un evento: "<<endl;
+    int num;
+
+    for(Evento* ptrEvento: listaEventos){ //se crea un puntero de tipo evento y apunta a cada evento a la hora de seleccionar
+        cout << num << ") " << ptrEvento -> getTipoEvento() <<endl;
+        num++;
+    }
+
+    int eleccion;
+    cout << ">";
+    cin >> eleccion;
+
+    Evento* ptrEvento;
+
+    if(eleccion <= listaEventos.size() and eleccion >= 1){
+        ptrEvento = listaEventos[eleccion-1]; //se selecciona el evento mediante el uso del puntero
+
+        string nombre;
+        int edad;
+        string ocupacion;
+    }
+
+
+
+
 
 }//fin registroAsistentes
 
@@ -100,33 +141,34 @@ void cargarDatos(){
 
 }//fin cargarDatos
 
+void printeoMenu(){
+    
+}
+
 
 void iniciarMenu(){ //inicia el menu del programa
 
-    cout << "------------------------------"<<endl;
-    cout << "Bienvenido al sistema de eventos" << endl;
-    cout << "Seleccione opcion: " << endl;
-    cout << endl;
-    cout << "1) Agendar evento" << endl;
-    cout << "2) Registrar asistente" << endl;
-    cout << "3) Consultar asistentes" << endl;
-    cout << "4) Generar informes" << endl;
-    cout << "5) Guardar cambios" << endl;
-    cout << "6) Cargar datos" << endl;
-    cout << "7) Salir" << endl;
-
     string opt;
-
-    cout<<">"<<endl;
-    cin>>opt;
-
+    cout << "Bienvenido al sistema de eventos" << endl;
     do{
+        
+        cout << "------------------------------"<<endl;
+        cout << "Seleccione opcion: " << endl;
+        cout << "1) Agendar evento" << endl;
+        cout << "2) Registrar asistente" << endl;
+        cout << "3) Consultar asistentes" << endl;
+        cout << "4) Generar informes" << endl;
+        cout << "5) Guardar cambios" << endl;
+        cout << "6) Cargar datos" << endl;
+        cout << "7) Salir" << endl;
+        cout << "------------------------------"<<endl;
+        cout<<">"; cin>>opt; cout<<endl;
 
         if(opt == "1"){ agendarEvento(); }
 
-        else if(opt == "2"){ consultaAsistentes(); }
+        else if(opt == "2"){ registroAsistentes(); }
 
-        else if(opt == "3"){registroAsistentes();}
+        else if(opt == "3"){consultaAsistentes();}
 
         else if(opt == "4"){ generarInforme();}
 

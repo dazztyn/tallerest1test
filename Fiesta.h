@@ -10,7 +10,7 @@ private: //atributos
 
 public: //metodos
 
-    Fiesta(int,string,string,string,string); //constructor
+    Fiesta(int,string,string,string,string,string); //constructor
     ~Fiesta(); //destructor
 
     //getters y setters
