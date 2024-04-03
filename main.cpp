@@ -115,16 +115,55 @@ void registroAsistentes(){
         string nombre;
         int edad;
         string ocupacion;
+        
+        cout << "Ingrese nombre de asistente: "<<endl; cout << ">"; cin >> nombre; cout << endl;
+
+        cout << "Ingrese edad de asistente:" <<endl; cout << ">"; cin >> edad; cout << endl;
+
+        cout << "Ingrese ocupacion de asistente (estudiante, trabajador, etc): "<<endl; cout << "<"; cin>>ocupacion; cout<<endl;
+
+        if(edad >= 18){
+            Asistente* asistente = new Asistente(nombre,edad,"mayor",ocupacion);
+            ptrEvento -> agregarAsistente(asistente);
+            cout << "asistente adulto registrado!" << endl;
+        }
+        Asistente* asistente = new Asistente(nombre,edad,"menor",ocupacion);
+        ptrEvento -> agregarAsistente(asistente);
+
+        cout << "asistente registrado!"<<endl;
+
     }
-
-
-
-
+    else{
+        ptrEvento = NULL;
+        cout << "Evento no encontrado, saliendo..." << endl;
+    }
 
 }//fin registroAsistentes
 
 void consultaAsistentes(){
 
+    cout << "seleccione un evento: "<<endl;
+    int num;
+
+    for(Evento* ptrEvento: listaEventos){ //se crea un puntero de tipo evento y apunta a cada evento a la hora de seleccionar
+        cout << num << ") " << ptrEvento -> getTipoEvento() <<endl;
+        num++;
+    }
+
+    int eleccion;
+    cout << ">";
+    cin >> eleccion;
+
+    Evento* ptrEvento;
+    if(eleccion <= listaEventos.size() and eleccion >= 1){
+        ptrEvento = listaEventos[eleccion-1]; //se selecciona el evento mediante el uso del puntero
+        string texto = ptrEvento -> desplegarAsistentes();
+        cout << texto << endl;
+    }
+    else{
+        ptrEvento = NULL;
+        cout <<"Evento no encontrado, saliendo..."<<endl;
+    }
 }//fin consultaAsistentes
 
 void generarInforme(){

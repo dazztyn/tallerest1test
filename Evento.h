@@ -17,16 +17,16 @@ public: //metodos
     ~Evento(); //destructor
 
     //getters y setters
-    virtual int getDuracion();
-    virtual void setDuracion(int);
-    virtual string getUbicacion();
-    virtual void setUbicacion(string);
-    virtual string getFecha();
-    virtual void setFecha(string);
-    virtual string getTipoEvento();
-    virtual void setTipoEvento(string);
+    int getDuracion();
+    void setDuracion(int);
+    string getUbicacion();
+    void setUbicacion(string);
+    string getFecha();
+    void setFecha(string);
+    string getTipoEvento();
+    void setTipoEvento(string);
     
-    virtual void agregarAsistente(Asistente*);
-
+    void agregarAsistente(Asistente*);
+    string desplegarAsistentes();
     
 };

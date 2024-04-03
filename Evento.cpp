@@ -49,3 +49,13 @@ void Evento::setTipoEvento(string tipoEvento){
 void Evento::agregarAsistente(Asistente* ptrAsistente){ //agrega un puntero tipo asistente a la lista
     asistentes.push_back(ptrAsistente);
 }
+
+string Evento::desplegarAsistentes(){ //depliega los asistentes que van al evento
+
+    string txt;
+    for(Asistente* ptrAsistente : asistentes ){
+        txt += (ptrAsistente -> getNombre() + " ");
+        txt += (ptrAsistente -> getEdad() + "\n");
+    }
+    return txt;
+}
