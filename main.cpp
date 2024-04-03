@@ -6,8 +6,6 @@
 #include "Fiesta.h"
 #include "EventoDeportivo.h"
 #include "Asistente.h"
-#include "Adulto.h"
-#include "Adolescente.h"
 using namespace std;
 
 //lista global eventos
