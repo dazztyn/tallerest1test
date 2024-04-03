@@ -179,7 +179,7 @@ void iniciarMenu(){ //inicia el menu del programa
         }
 
         else{
-            cout << "Opcion invalida, por favor intente nuevamente" << endl;
+            cout << "Opcion invalida! por favor intente nuevamente" << endl;
         }
 
     }
