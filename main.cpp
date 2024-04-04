@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <cmath> //para utilizar round()
 #include "Evento.h"
 #include "Conferencia.h"
 #include "Concierto.h"
@@ -210,27 +211,61 @@ void asistentesRegistrados(){
    }
 }
 
-void estadisticas(){
+void estadisticas(){ //seccion del menu de informes que despliega estadisticas generales de los eventos y asistentes
 
     int contMenores = 0, contMayores = 0;
-
+    
     for(Asistente* ptrAsistente : listaAsistentes){
-        if (ptrAsistente -> getEdad() >= 18){
-            contMayores++;
-        }
-        else{
-            contMenores++;
-        }
+        if (ptrAsistente -> getEdad() >= 18){contMayores++;}
+        else{contMenores++;}
     }
-
+    
     cout << "Asistentes mayores de edad: " << contMayores << endl;
     cout << "Asistentes menores de edad: " << contMenores << endl;
 
-}
+    int contConciertos = 0, contConferencias = 0, contED = 0, contFiestas = 0;
 
+    for(Evento* ptrEvento : listaEventos){
+        if(ptrEvento -> getTipoEvento() == "concierto"){contConciertos++;}
+        else if(ptrEvento -> getTipoEvento() == "conferencia"){contConferencias++;}
+        else if(ptrEvento -> getTipoEvento() == "evento deportivo") {contED++;}
+        else if(ptrEvento -> getTipoEvento() == "fiesta") {contFiestas++;}
+    }
 
+    cout << "-----------------------------" << endl;
+    cout << "Conferencias: "<<contConferencias<<endl;
+    cout << "Conciertos: " << contConciertos << endl;
+    cout << "Fiestas: "<<contFiestas<<endl;
+    cout << "Ev. Deportivos: "<<contED<<endl;
+    cout << "-----------------------------" << endl;
 
-void generarInforme(){
+    int sumaEdades = 0;
+    for (Asistente* ptrAsistente : listaAsistentes) {
+        sumaEdades += ptrAsistente->getEdad();
+    }
+    double promedio = (sumaEdades / listaAsistentes.size());
+    int promedioInt = round(promedio);
+
+    cout << "la edad promedio de los asistentes es de "<<promedioInt<<" años"<<endl;
+    cout << "-----------------------------" << endl;
+    int contConciertos = 0, contConferencias = 0, contED = 0, contFiestas = 0;
+
+    for (Evento* ptrEvento : listaEventos) {
+        if (ptrEvento->getTipoEvento() == "concierto") { contConciertos += ptrEvento->getAsistentes(); }
+        else if (ptrEvento->getTipoEvento() == "conferencia") { contConferencias += ptrEvento->getAsistentes(); }
+        else if (ptrEvento->getTipoEvento() == "evento deportivo") { contED += ptrEvento->getAsistentes(); }
+        else if (ptrEvento->getTipoEvento() == "fiesta") { contFiestas += ptrEvento->getAsistentes(); }
+    }
+
+    cout << "Asistentes en conferencias: " << contConferencias << endl;
+    cout << "Asistentes en conciertos: " << contConciertos << endl;
+    cout << "Asistentes en fiestas: " << contFiestas << endl;
+    cout << "Asistentes en eventos deportivos: " << contED << endl;
+    cout << "-----------------------------" << endl;
+
+}//fin estadisticas
+
+void generarInforme(){ //seccion que muestra el menu de informes desde el menu de usuario
 
     cout << "1) Lista de eventos programados" << endl;
     cout << "2) Asistentes registrados para evento" << endl;

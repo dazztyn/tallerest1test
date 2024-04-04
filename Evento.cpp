@@ -67,3 +67,7 @@ void Evento::desplegarInfo(){
     cout << "-" << this -> tipoEvento << ". id: " << this -> idEvento << ". a realizar el " << this -> fecha << " en " << this -> ubicacion << "." << endl;
     cout << "   el evento dura: " << this -> duracion << " horas. ";
 }
+
+int Evento::getAsistentes(){
+    return asistentes.size();
+}

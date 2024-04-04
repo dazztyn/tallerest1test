@@ -28,6 +28,7 @@ public: //metodos
     virtual void setTipoEvento(string);
     virtual int getIdEvento();
     virtual void setIdEvento(int);
+    virtual int getAsistentes();
     
     virtual void agregarAsistente(Asistente*);
     virtual void desplegarAsistentes();
