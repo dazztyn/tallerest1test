@@ -155,7 +155,7 @@ void registroAsistentes(){ //permite elegir un evento existente y registra a un 
 
 }//fin registroAsistentes
 
-void consultaAsistentes(){
+void consultaAsistentes(){ //permite revisar los asistentes de un evento
 
     cout << "seleccione un evento: "<<endl;
     int num = 1;
@@ -180,14 +180,14 @@ void consultaAsistentes(){
     }
 }//fin consultaAsistentes
 
-void eventosProgramados(){ //opcion 
+void eventosProgramados(){ //opcion  para desplegar todos los eventos programados
     
     for(Evento* ptrEvento: listaEventos){
         ptrEvento -> desplegarInfo();
     }
 }
 
-void asistentesRegistrados(){
+void asistentesRegistrados(){ //permite desplegar a los asistentes de un evento programado
     
     cout << "seleccione un evento: "<<endl;
     int num = 1;
@@ -289,14 +289,13 @@ void generarInforme(){ //seccion que muestra el menu de informes desde el menu d
 
 }//fin generarInforme
 
-void guardarRegistro(){
+void guardarRegistro(){ //permite guardar los cambios de nueva informacion en la "base de datos"
 
 }//fin guardarRegistro
 
-void cargarDatos(){
+void cargarDatos(){ //lee el archivo inicial
 
 }//fin cargarDatos
-
 
 void iniciarMenu(){ //inicia el menu del programa
 
@@ -343,7 +342,7 @@ void iniciarMenu(){ //inicia el menu del programa
 
 }//fin iniciarMenu
 
-int main(){
+int main(){ //main del programa, llama al inicio de menu
 
     //cargarDatos();
     iniciarMenu();
