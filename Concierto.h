@@ -11,7 +11,7 @@ private: //atributos
 
 public: //metodos
 
-    Concierto(int, string, string,string,int,string); //constructor
+    Concierto(int, string, string,string,int,int,string); //constructor
     ~Concierto(); //destructor
 
     //getters y setters
@@ -19,5 +19,7 @@ public: //metodos
     void setCapacidad(int);
     string getTipoConcierto();
     void setTipoConcierto(string);
+
+    void desplegarInfo();
 
 };

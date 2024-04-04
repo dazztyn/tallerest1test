@@ -4,12 +4,13 @@
 #include "Asistente.h"
 using namespace std;
 
-Evento::Evento(int duracion, string ubicacion, string fecha,string tipoEvento){ //constructor clase padre
+Evento::Evento(int duracion, string ubicacion, string fecha,string tipoEvento,int idEvento){ //constructor clase padre
 
     this -> duracion = duracion;
     this -> ubicacion = ubicacion;
     this -> fecha = fecha;
     this -> tipoEvento = tipoEvento;
+    this -> idEvento = idEvento;
     
 }
 
@@ -45,17 +46,24 @@ string Evento::getTipoEvento(){
 void Evento::setTipoEvento(string tipoEvento){
     this -> tipoEvento = tipoEvento;
 }
+int Evento::getIdEvento(){
+    return this -> idEvento;
+}
+void Evento::setIdEvento(int id){
+    this -> idEvento = id;
+}
 
 void Evento::agregarAsistente(Asistente* ptrAsistente){ //agrega un puntero tipo asistente a la lista
     asistentes.push_back(ptrAsistente);
 }
 
-string Evento::desplegarAsistentes(){ //depliega los asistentes que van al evento
-
-    string txt;
+void Evento::desplegarAsistentes(){ //depliega los asistentes que van al evento
     for(Asistente* ptrAsistente : asistentes ){
-        txt += (ptrAsistente -> getNombre() + " ");
-        txt += (ptrAsistente -> getEdad() + "\n");
+        cout << ptrAsistente -> getNombre() << ". edad:" << ptrAsistente -> getEdad() << " " << ptrAsistente -> getTipoAsistente() << endl;
     }
-    return txt;
+}
+
+void Evento::desplegarInfo(){
+    cout << "-" << this -> tipoEvento << ". id: " << this -> idEvento << ". a realizar el " << this -> fecha << " en " << this -> ubicacion << "." << endl;
+    cout << "   el evento dura: " << this -> duracion << " horas. ";
 }

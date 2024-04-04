@@ -9,7 +9,6 @@ Asistente::Asistente(string nombre, int edad, string tipoAsistente, string ocupa
     this -> edad = edad;
     this -> tipoAsistente = tipoAsistente;
     this -> ocupacion = ocupacion;
-    
 }
 
 string Asistente::getNombre(){
@@ -44,3 +43,6 @@ void Asistente::setOcupacion(string ocupacion){
     this -> ocupacion = ocupacion;
 }
 
+void Asistente::agregarEvento(int id){
+    idsEventos.push_back(id);
+}

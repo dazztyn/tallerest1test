@@ -2,8 +2,8 @@
 #include "EventoDeportivo.h"
 using namespace std;
 
-EventoDeportivo::EventoDeportivo(int duracion, string ubicacion, string fecha, string tipoEvento, string deporte, bool hayApuestas)
-:Evento(duracion,ubicacion,fecha,tipoEvento){
+EventoDeportivo::EventoDeportivo(int duracion, string ubicacion, string fecha, string tipoEvento, int idEvento,string deporte, bool hayApuestas)
+:Evento(duracion,ubicacion,fecha,tipoEvento,idEvento){
 
     this -> deporte = deporte;
     this -> hayApuestas = hayApuestas;
@@ -22,6 +22,17 @@ void EventoDeportivo::setDeporte(string deporte){
 bool EventoDeportivo::getHayApuestas(){
     return this -> hayApuestas;
 }
- void EventoDeportivo::setHayApuestas(bool apuesta){
+void EventoDeportivo::setHayApuestas(bool apuesta){
     this -> hayApuestas = apuesta;
- }
+}
+
+void EventoDeportivo::desplegarInfo(){
+    Evento::desplegarInfo();
+
+    string verificadorApuestas = "no";
+    if (this -> hayApuestas == true){
+        verificadorApuestas = "si";
+    }
+
+    cout << "Deporte a jugar: " << this -> deporte << "apuestas: " << verificadorApuestas << endl;
+}

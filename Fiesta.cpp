@@ -2,7 +2,8 @@
 #include "Fiesta.h"
 using namespace std;
 
-Fiesta::Fiesta(int duracion, string ubicacion, string fecha,string tipoEvento, string tematica, string invitado):Evento(duracion,ubicacion,fecha,tipoEvento){
+Fiesta::Fiesta(int duracion, string ubicacion, string fecha,string tipoEvento,int idEvento, string tematica, string invitado):
+Evento(duracion,ubicacion,fecha,tipoEvento,idEvento){
 
     this -> tematica = tematica;
     this -> invitadoEspecial = invitado;
@@ -22,4 +23,9 @@ string Fiesta::getInvitadoEspecial(){
 }
 void Fiesta::setInvitadoEspecial(string inv){
     this -> invitadoEspecial = inv;
+}
+
+void Fiesta::desplegarInfo(){
+    Evento::desplegarInfo();
+    cout << "tematica: " << this -> tematica << ". invitadx especial: " << this -> invitadoEspecial << endl;
 }

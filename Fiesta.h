@@ -10,7 +10,7 @@ private: //atributos
 
 public: //metodos
 
-    Fiesta(int,string,string,string,string,string); //constructor
+    Fiesta(int,string,string,string,int,string,string); //constructor
     ~Fiesta(); //destructor
 
     //getters y setters
@@ -18,4 +18,6 @@ public: //metodos
     void setTematica(string);
     string getInvitadoEspecial();
     void setInvitadoEspecial(string);
+
+    void desplegarInfo();
 };

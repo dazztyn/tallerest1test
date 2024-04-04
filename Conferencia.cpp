@@ -4,7 +4,8 @@
 using namespace std;
 
 //constructor de la herencia
-Conferencia::Conferencia(int duracion, string ubicacion, string fecha,string tipoEvento, string temaConferencia) : Evento(duracion,ubicacion,fecha,tipoEvento){
+Conferencia::Conferencia(int duracion, string ubicacion, string fecha,string tipoEvento,int idEvento, string temaConferencia) : 
+Evento(duracion,ubicacion,fecha,tipoEvento,idEvento){
     this -> temaConferencia = temaConferencia;
 };
 //destructor
@@ -16,4 +17,9 @@ string Conferencia::getTemaConferencia(){
 }
 void Conferencia::setTemaConferencia(string temaConferencia){
     this -> temaConferencia = temaConferencia;
+}
+
+void Conferencia::desplegarInfo(){
+    Evento::desplegarInfo();
+    cout << "Tema de Conferencia: " << this -> temaConferencia << endl;
 }

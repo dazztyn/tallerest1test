@@ -9,11 +9,12 @@ private:
 
 public:
 
-    Conferencia(int,string,string,string,string); //constructor
+    Conferencia(int,string,string,string,int,string); //constructor
     ~Conferencia();
 
     //atributos
 
     string getTemaConferencia();
     void setTemaConferencia(string);
+    void desplegarInfo();
 };

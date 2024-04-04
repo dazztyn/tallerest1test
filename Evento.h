@@ -8,25 +8,30 @@ class Evento{
 private: //atributos
     int duracion;
     string ubicacion, fecha, tipoEvento;
+    int idEvento;
 protected:
     vector<Asistente*> asistentes;
 
 public: //metodos
 
-    Evento(int, string, string, string); //constructor
+    Evento(int, string, string, string,int); //constructor
     ~Evento(); //destructor
 
     //getters y setters
-    int getDuracion();
-    void setDuracion(int);
-    string getUbicacion();
-    void setUbicacion(string);
-    string getFecha();
-    void setFecha(string);
-    string getTipoEvento();
-    void setTipoEvento(string);
+    virtual int getDuracion();
+    virtual void setDuracion(int);
+    virtual string getUbicacion();
+    virtual void setUbicacion(string);
+    virtual string getFecha();
+    virtual void setFecha(string);
+    virtual string getTipoEvento();
+    virtual void setTipoEvento(string);
+    virtual int getIdEvento();
+    virtual void setIdEvento(int);
     
-    void agregarAsistente(Asistente*);
-    string desplegarAsistentes();
+    virtual void agregarAsistente(Asistente*);
+    virtual void desplegarAsistentes();
+
+    virtual void desplegarInfo();
     
 };
