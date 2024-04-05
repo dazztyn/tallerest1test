@@ -15,7 +15,6 @@ using namespace std;
 //lista global eventos
 vector<Evento*> listaEventos;
 vector<Asistente*> listaAsistentes;
-vector<string> tokens;
 
 int nuevaID() { //genera una id random para los eventos
     int num = 1;
@@ -199,7 +198,7 @@ void asistentesRegistrados(){ //permite desplegar a los asistentes de un evento 
     }
 }
 
-void estadisticas(){ //seccion del menu de informes que despliega estadisticas generales de los eventos y asistentes
+void estadisticas(){ //seccion del menu de informes que despliega estadisticas generales de los eventos y asistentes<
 
     int contMenores = 0, contMayores = 0;
     
@@ -280,6 +279,7 @@ void generarInforme(){ //seccion que muestra el menu de informes desde el menu d
 }//fin generarInforme
 
 void guardarRegistro(){ //permite guardar los cambios de nueva informacion en la "base de datos"
+
 
 }//fin guardarRegistro
 
