@@ -1,0 +1,8 @@
+Carlos Peña,19,mayor,estudiante,10003,10004
+Javier Catalan,20,mayor,estudiante,10001,10003
+David Ramos,21,mayor,estudiante,10004
+Benjamin Miranda,22,mayor,estudiante,10003
+Luis Maturana,50,mayor,profesor,10002
+Pepe Tapia,12,menor,estudiante,10004
+Alonso Sepulveda,16,menor,estudiante,10001
+Maximiliano Pasten,30,mayor,estudiante,10001,10003,10004

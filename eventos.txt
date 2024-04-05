@@ -1,0 +1,4 @@
+3,Coquimbo,15/10/2024,concierto,10001,10000,festival
+1,Santiago,16/04/2024,conferencia,10002,prensa
+6,La Serena,05/05/2024,fiesta,10003,ucn vs uls,FloyyMenor
+2,Iquique,17/07/2024,evento deportivo,10004,futbol,s

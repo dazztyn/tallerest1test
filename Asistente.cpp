@@ -46,3 +46,12 @@ void Asistente::setOcupacion(string ocupacion){
 void Asistente::agregarEvento(int id){
     idsEventos.push_back(id);
 }
+
+string Asistente::mostrarIds(){
+    string txt = "";
+
+    for(int id : idsEventos){
+        txt += to_string(id) + " ";
+    }
+    return txt;
+}

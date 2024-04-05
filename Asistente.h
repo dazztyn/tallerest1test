@@ -31,4 +31,6 @@ public: //metodos
     void setOcupacion(string);
     
     void agregarEvento(int);
+
+    string mostrarIds();
 };
