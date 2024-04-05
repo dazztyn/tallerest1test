@@ -23,3 +23,20 @@ void Conferencia::desplegarInfo(){
     Evento::desplegarInfo();
     cout << "Tema de Conferencia: " << this -> temaConferencia << endl;
 }
+
+string Conferencia::toString(){
+
+    string str;
+
+    int duracion = Evento::getDuracion();
+    string ubicacion =  Evento::getUbicacion();
+    string fecha =  Evento::getFecha();
+    string tipoEvento =  Evento::getTipoEvento();
+    int id =  Evento::getIdEvento();
+
+    str += to_string(duracion) + "," + ubicacion + "," + fecha + "," + tipoEvento + ",";
+    str += to_string(id) + "," + this -> temaConferencia + "\n";
+    
+    return str;
+
+}

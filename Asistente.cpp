@@ -11,6 +11,7 @@ Asistente::Asistente(string nombre, int edad, string tipoAsistente, string ocupa
     this -> ocupacion = ocupacion;
 }
 
+//getters y setters
 string Asistente::getNombre(){
     return this -> nombre;
 }
@@ -49,9 +50,32 @@ void Asistente::agregarEvento(int id){
 
 string Asistente::mostrarIds(){
     string txt = "";
-
     for(int id : idsEventos){
-        txt += to_string(id) + " ";
+        txt += to_string(id) + " "; //despliega las ids de los eventos a los que un asistente va
     }
+    return txt;
+}
+
+string Asistente::toString(){ //retorna una linea de string para la sobreescritura del archivo
+    string txt;
+
+    txt += this -> nombre + "," + to_string(this -> edad) + "," + this -> tipoAsistente + "," + this ->ocupacion + ",";
+    
+    string idsEventos;
+    int cont = 1;
+    int limite = this -> idsEventos.size();
+
+    for(int id: this -> idsEventos){
+        if(cont == limite){
+            idsEventos += to_string(id);
+        }
+        else{
+            idsEventos += to_string(id) + ",";
+        }
+        cont++;
+    }
+
+    txt += idsEventos + "\n";
+
     return txt;
 }

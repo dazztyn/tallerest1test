@@ -17,4 +17,6 @@ public:
     string getTemaConferencia();
     void setTemaConferencia(string);
     void desplegarInfo();
+
+    string toString();
 };

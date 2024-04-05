@@ -20,4 +20,5 @@ public: //metodos
     void setInvitadoEspecial(string);
 
     void desplegarInfo();
+    string toString();
 };

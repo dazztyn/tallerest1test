@@ -21,5 +21,6 @@ public: //metodos
     void setTipoConcierto(string);
 
     void desplegarInfo();
+    string toString();
 
 };

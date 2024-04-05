@@ -20,4 +20,5 @@ public: //metodos
     void setHayApuestas(bool);
 
     void desplegarInfo();
+    string toString();
 };

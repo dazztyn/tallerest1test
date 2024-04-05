@@ -27,7 +27,6 @@ void Evento::setDuracion(int duracion){
 string Evento::getUbicacion(){
     return this -> ubicacion;
 }
-
 void Evento::setUbicacion(string ubicacion){
     this -> ubicacion = ubicacion;
 }
@@ -35,7 +34,6 @@ void Evento::setUbicacion(string ubicacion){
 string Evento::getFecha(){
     return this -> fecha;
 }
-
 void Evento::setFecha(string fecha){
     this -> fecha = fecha;
 }
@@ -63,11 +61,18 @@ void Evento::desplegarAsistentes(){ //depliega los asistentes que van al evento
     }
 }
 
-void Evento::desplegarInfo(){
+void Evento::desplegarInfo(){ //despliega la info de un evento en el apartado de estadisticas 
     cout << "-" << this -> tipoEvento << ". id: " << this -> idEvento << ". a realizar el " << this -> fecha << " en " << this -> ubicacion << "." << endl;
     cout << "   el evento dura: " << this -> duracion << " horas. ";
 }
 
 int Evento::getAsistentes(){
-    return asistentes.size();
+    return asistentes.size(); //devuelve la cantidad de asistentes de un evento
+}
+
+string Evento::toString(){ //devuelve una linea de texto para la escritura del txt
+    string str;
+    str += this -> duracion + "," + this -> ubicacion + "," + this -> fecha + "," + this -> tipoEvento + ",";
+    str += + this -> idEvento;
+    return str;
 }

@@ -25,7 +25,23 @@ void Fiesta::setInvitadoEspecial(string inv){
     this -> invitadoEspecial = inv;
 }
 
-void Fiesta::desplegarInfo(){
+void Fiesta::desplegarInfo(){ //desplega la info faltante del evento
     Evento::desplegarInfo();
     cout << "tematica: " << this -> tematica << ". invitadx especial: " << this -> invitadoEspecial << endl;
+}
+
+string Fiesta::toString(){ //retorna la linea del txt
+    
+    string str;
+
+    int duracion = Evento::getDuracion();
+    string ubicacion =  Evento::getUbicacion();
+    string fecha =  Evento::getFecha();
+    string tipoEvento =  Evento::getTipoEvento();
+    int id =  Evento::getIdEvento();
+
+    str += to_string(duracion) + "," + ubicacion + "," + fecha + "," + tipoEvento + ",";
+    str += to_string(id) + "," + this -> tematica + "," + this -> invitadoEspecial + "\n";
+    
+    return str;
 }

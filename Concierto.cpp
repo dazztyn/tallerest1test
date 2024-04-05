@@ -27,7 +27,22 @@ void Concierto::setTipoConcierto(string tipoConcierto){
     this -> tipoConcierto = tipoConcierto;
 }
 
-void Concierto::desplegarInfo(){
+void Concierto::desplegarInfo(){ //despliega la info faltante desde la subclase de un evento
     Evento::desplegarInfo();
     cout << "capacidad: " << this -> capacidad << " personas. El show es un " << this -> tipoConcierto << endl;
+}
+
+string Concierto::toString(){ //retorna la linea del txt
+    string str;
+
+    int duracion = Evento::getDuracion();
+    string ubicacion =  Evento::getUbicacion();
+    string fecha =  Evento::getFecha();
+    string tipoEvento =  Evento::getTipoEvento();
+    int id =  Evento::getIdEvento();
+
+    str += to_string(duracion) + "," + ubicacion + "," + fecha + "," + tipoEvento + ",";
+    str += to_string(id) + "," + to_string(this -> capacidad) + "," + this -> tipoConcierto + "\n";
+    
+    return str;
 }
